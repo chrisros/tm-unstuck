@@ -4,6 +4,12 @@ A tiny macOS menu bar app that shows what Time Machine is doing and clears it wh
 
 Time Machine sometimes hangs on "Preparing backup…" or "Cleaning up…" for hours, or leaves the backup disk mounted after a backup that never finished. Fixing that usually means opening Terminal and running `tmutil` and `killall` as root. TM Unstuck puts those fixes in the menu bar.
 
+## Why I built this
+
+I ran into this after turning on automatic Time Machine backups to a NAS. I work with a lot of large video files, and Time Machine tried to back all of them up at once. It couldn't finish in the two hours my laptop was open. After that the backup was stuck: it never completed or recovered on its own. Meanwhile the local snapshot it had made for the backup kept taking up a lot of disk space on my Mac.
+
+Getting out of that state meant digging through `tmutil` commands. This app makes the stuck state visible and lets you clear it, including deleting the leftover local snapshots, in a couple of clicks.
+
 ## Features
 
 - **Live backup status:** current phase, percent, bytes copied, time running and time since the last progress. Polled every 10 seconds.
