@@ -42,7 +42,7 @@ xattr -dr com.apple.quarantine "/Applications/TM Unstuck.app"
 ### Build from source
 
 ```bash
-git clone https://github.com/<you>/tm-unstuck.git
+git clone https://github.com/chrisros/tm-unstuck.git
 cd tm-unstuck
 ./build.sh --install   # builds build/TM Unstuck.app and copies it to ~/Applications
 open ~/Applications/TM\ Unstuck.app
